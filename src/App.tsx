@@ -5,12 +5,15 @@ import 'react-native-gesture-handler';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
 
 import AppStack from '@core/navigation/AppStack';
+import QueryClientProvider from '@core/providers/QueryClientProvider';
 
 const App = () => {
   return (
     <GestureHandlerRootView style={{flex: 1}}>
       <SafeAreaProvider>
-        <AppStack />
+        <QueryClientProvider>
+          <AppStack />
+        </QueryClientProvider>
       </SafeAreaProvider>
     </GestureHandlerRootView>
   );
