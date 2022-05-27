@@ -5,7 +5,8 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 import HomeTabs from '@core/navigation/HomeTabs';
 import PlantDetails from '@core/screens/PlantDetails';
-import { AppStackParamList } from './types';
+
+import {AppStackParamList} from './types';
 
 const Stack = createNativeStackNavigator<AppStackParamList>();
 
