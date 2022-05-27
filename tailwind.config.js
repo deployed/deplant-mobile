@@ -3,7 +3,6 @@ const colors = require('tailwindcss/colors')
 module.exports = {
     theme: {
         colors: {
-            ...colors,
             'very-dark-green': '#2D452F',
             'dark-green': '#6B9D4A',
             green: '#6B9D4A',
