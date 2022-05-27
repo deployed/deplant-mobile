@@ -8,6 +8,7 @@ module.exports = {
             green: '#6B9D4A',
             'ligth-green': '#CFE2CE',
             ligth: '#F1F1F1',
+            white: colors.white,
         }
     }
 }
