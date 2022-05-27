@@ -1,5 +1,5 @@
 export type HomeTabsParamList = {
   FlowerList: undefined;
-  FlowerScanner: undefined;
+  PlantScanner: undefined;
   AddFlower: undefined;
 };

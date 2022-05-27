@@ -1,10 +1,11 @@
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
+import tw from '@core/styles/tailwind';
 
 const PlantScanner = () => {
   return (
-    <View style={styles.container}>
-      <Text>PlantScanner</Text>
+    <View style={tw`flex-1 justify-center items-center`}>
+      <Text style={tw`bg-dark-green`}>PlantScanner</Text>
     </View>
   );
 };
