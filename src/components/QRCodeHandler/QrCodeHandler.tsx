@@ -1,14 +1,14 @@
 import React, {useState, useEffect} from 'react';
 import {View, Text} from 'react-native';
 
+import {useFocusEffect, useNavigation} from '@react-navigation/native';
 import {BarCodeScanner, BarCodeEvent} from 'expo-barcode-scanner';
 
 import tw from '@core/styles/tailwind';
-import { useFocusEffect, useNavigation } from '@react-navigation/native';
 
 const getFlowerID = (dataFromQRCode: string): string => {
   return dataFromQRCode;
-}
+};
 
 const QRCodeHandler = () => {
   const [hasPermission, setHasPermission] = useState<boolean>();
@@ -24,15 +24,15 @@ const QRCodeHandler = () => {
   }, []);
 
   useFocusEffect(() => {
-    if(hasPermission){
+    if (hasPermission) {
       setRenderBarCode(true);
     }
-  })
+  });
 
   const handleBarCodeScanned = ({data}: BarCodeEvent) => {
     setRenderBarCode(false);
     const flowerID = getFlowerID(data);
-    navigate('PlantDetails', { id: flowerID })
+    navigate('PlantDetails', {id: flowerID});
   };
 
   if (hasPermission === null) {
@@ -46,7 +46,12 @@ const QRCodeHandler = () => {
   return (
     <View style={tw`border-2 flex-1 justify-center items-center`}>
       <Text>Scan the flower</Text>
-      {renderBarCode && <BarCodeScanner style={tw`border-2 border-green w-60 h-4/6 m-4`} onBarCodeScanned={handleBarCodeScanned}/>}
+      {renderBarCode && (
+        <BarCodeScanner
+          style={tw`border-2 border-green w-60 h-4/6 m-4`}
+          onBarCodeScanned={handleBarCodeScanned}
+        />
+      )}
     </View>
   );
 };
