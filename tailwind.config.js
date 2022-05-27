@@ -9,6 +9,7 @@ module.exports = {
             'ligth-green': '#CFE2CE',
             ligth: '#F1F1F1',
             white: colors.white,
+            black: colors.black
         }
     }
 }

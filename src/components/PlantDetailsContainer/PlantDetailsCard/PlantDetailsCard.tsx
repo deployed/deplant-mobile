@@ -1,8 +1,11 @@
 import React from 'react';
 import {View, Text, Image} from 'react-native';
-import WaterIntervalIcon from '../../../../assets/water-interval-icon.svg';
 
 import tw from '@core/styles/tailwind';
+
+import PlantStateIconBad from '../../../../assets/plant-state-bad-icon.svg';
+import SunDemandIcon from '../../../../assets/sun-demand-icon.svg';
+import WaterIntervalIcon from '../../../../assets/water-interval-icon.svg';
 
 interface PlantDetailsCardProps {
   imgUrl: string;
@@ -27,7 +30,7 @@ const PlantDetailsCard = ({
   waterInterval = '5',
 }: Partial<PlantDetailsCardProps>) => {
   return (
-    <View style={tw`bg-white w-5/6 p-4 shadow-lg shadow-white rounded-lg`}>
+    <View style={tw`bg-white m-6 p-4 shadow-lg shadow-white rounded-lg`}>
       <View style={tw`flex-row justify-between`}>
         <Image
           style={tw`rounded-lg`}
@@ -39,64 +42,45 @@ const PlantDetailsCard = ({
         />
         <View style={tw`flex-col justify-between`}>
           <View>
-            <Text style={tw`text-very-dark-green text-lg font-semibold`}>
-              Połozenie
-            </Text>
-            <Text style={tw`text-very-dark-green text-xs`}>{location}</Text>
+            <Text style={tw`text-lg font-semibold`}>Połozenie</Text>
+            <Text style={tw`text-xs`}>{location}</Text>
           </View>
-          <View>
-            <Text style={tw`text-very-dark-green text-lg font-semibold`}>
-              Stan
-            </Text>
-            <Text style={tw`text-very-dark-green text-xs`}>{plantState}</Text>
+          <View style={tw`flex-row justify-between items-center`}>
+            <View>
+              <Text style={tw`text-lg font-semibold`}>Stan</Text>
+              <Text style={tw`text-xs`}>{plantState}</Text>
+            </View>
+            <PlantStateIconBad width={25} />
           </View>
         </View>
       </View>
-      <View style={tw`flex-row justify-between items-center`}>
-        <View>
-          <Image
-            source={{
-              uri: 'water-interval-icon.svg',
-              width: 35,
-              height: 32,
-            }}
-          />
-          <Text style={tw`text-very-dark-green text-xs`}>
-            Co{' '}
-            <Text style={tw`text-very-dark-green text-xl font-semibold`}>
-              {waterInterval}
-            </Text>{' '}
+      <View style={tw`flex-row justify-between items-center my-5`}>
+        <View style={tw`flex-row justify-between items-center mr-5`}>
+          <WaterIntervalIcon height={35} />
+          <Text style={tw`text-10px`}>
+            Co 
+          </Text>
+          <Text style={tw`text-14px font-semibold`}>{` ${waterInterval} `}</Text>
+          <Text style={tw`text-10px`}>
             dni
           </Text>
         </View>
-        <View>
-          <Image
-            source={{
-              uri: 'water-interval-icon.svg',
-              width: 35,
-              height: 32,
-            }}
-          />
-          <Text style={tw`text-very-dark-green text-xl font-semibold`}>
-            {sunDemand}
-          </Text>
-          <Text style={tw`text-very-dark-green text-xs`}>
-            (średnie nasłonecznienie)
-          </Text>
+        <View style={tw`flex-row justify-center items-center`}>
+          <SunDemandIcon height={36} width={36} />
+          <View style={tw``}>
+            <Text style={tw`text-14px font-semibold`}>75%</Text>
+            <Text style={tw`text-10px w-80px`}>(średnie nasłonecznienie)</Text>
+          </View>
         </View>
       </View>
       <View>
-        <View>
-          <Text style={tw`text-very-dark-green text-lg font-semibold`}>
-            Gatunek
-          </Text>
-          <Text style={tw`text-very-dark-green text-xs ml-1`}>{species}</Text>
+        <View style={tw`mb-2`}>
+          <Text style={tw`text-lg font-semibold`}>Gatunek</Text>
+          <Text style={tw`text-xs ml-1`}>{species}</Text>
         </View>
         <View>
-          <Text style={tw`text-very-dark-green text-lg font-semibold`}>
-            Data urodzin
-          </Text>
-          <Text style={tw`text-very-dark-green text-xs ml-1`}>{birthday}</Text>
+          <Text style={tw`text-lg font-semibold`}>Data urodzin</Text>
+          <Text style={tw`text-xs ml-1`}>{birthday}</Text>
         </View>
       </View>
     </View>
