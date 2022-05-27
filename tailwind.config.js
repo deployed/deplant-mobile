@@ -7,7 +7,8 @@ module.exports = {
             'dark-green': '#6B9D4A',
             green: '#6B9D4A',
             'ligth-green': '#CFE2CE',
-            ligth: '#F1F1F1',
+            light: '#F1F1F1',
+            white: '#FFFFFF',
         }
     }
 }
