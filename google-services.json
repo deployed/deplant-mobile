@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "530701129876",
+    "project_id": "deplant-d3028",
+    "storage_bucket": "deplant-d3028.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:530701129876:android:cdf8a1fc8b0071712bfc81",
+        "android_client_info": {
+          "package_name": "com.deployed.deplant"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "530701129876-umubmfskslhksepkim65teu8d0gvvcqv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCmu89D3Qe0EPJKAotbxco8Y_kLKlZmkXU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "530701129876-umubmfskslhksepkim65teu8d0gvvcqv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
