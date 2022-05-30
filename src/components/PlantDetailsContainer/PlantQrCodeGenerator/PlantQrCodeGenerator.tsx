@@ -1,9 +1,12 @@
 import React from 'react'
-import { View, Text } from 'react-native'
+import { View, Button } from 'react-native'
 
 const PlantQrCodeGenerator = () => {
+  const handleOnPress = () => {
+    console.log('generating QR code...')
+  }
   return (
-    <View><Text>PlantQrCodeGenerator</Text></View>
+    <View><Button title={`Generate & share QR code`} onPress={handleOnPress}/></View>
   )
 }
 

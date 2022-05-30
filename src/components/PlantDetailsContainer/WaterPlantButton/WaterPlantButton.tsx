@@ -1,10 +1,14 @@
 import React from 'react'
-import { View, Text} from 'react-native'
+import { View, Button } from 'react-native'
 
 const WaterPlantButton = () => {
-  return (
-    <View><Text>WaterPlantButton</Text></View>
-  )
+    const handleOnPress = () => {
+      console.log('generating QR code...')
+    }
+    return (
+      <View><Button title={`Water`} onPress={handleOnPress}/></View>
+    )
+
 }
 
 export default WaterPlantButton
