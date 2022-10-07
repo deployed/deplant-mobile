@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "deplant-mobile",
-    "slug": "deplant-mobile",
+    "name": "DePlant",
+    "slug": "deplant",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",

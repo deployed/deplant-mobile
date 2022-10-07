@@ -1,6 +1,26 @@
 {
   "extends": "expo/tsconfig.base",
+  "exclude": ["src/utils/tests/setupTests.ts", "node_modules"],
   "compilerOptions": {
-    "strict": true
+    "strict": true,
+    "allowSyntheticDefaultImports": true,
+    "jsx": "react",
+    "lib": ["ES6", "ESNext"],
+    "module": "ESNext",
+    "target": "ESNext",
+    "skipLibCheck": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "resolveJsonModule": true,
+    "noEmit": true,
+    "baseUrl": "./",
+    "rootDir": "./",
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noErrorTruncation": true,
+    "paths": {
+      "@core/*": ["src/*"]
+    }
   }
 }
