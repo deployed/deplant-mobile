@@ -1,9 +1,10 @@
 import React from 'react';
-import {Pressable, Text} from 'react-native';
+import {Text} from 'react-native';
 
 import tw from '@core/styles/tailwind';
 
 import WaterDropIcon from '../../../../assets/water_drop.svg';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 interface WaterPlantButtonProps {
   children: string;
@@ -13,16 +14,16 @@ const WaterPlantButton = ({children}: WaterPlantButtonProps) => {
     console.log('Water the plant...');
   };
   return (
-    <Pressable
+    <TouchableOpacity
       style={tw`
         bg-very-dark-green flex flex-row items-center
         justify-center text-xxl font-bold h-14 rounded-[20px]
         my-5
         `}
       onPress={handleOnPress}>
-      <WaterDropIcon />
-      <Text style={tw`text-white`}>{children}</Text>
-    </Pressable>
+      <WaterDropIcon width={30} height={30}/>
+      <Text style={tw`text-white ml-2 text-xl font-bold`}>{children}</Text>
+    </TouchableOpacity>
   );
 };
 
