@@ -1,1 +1,1 @@
-export { default } from './PlantDetailsCard';
+export {default} from './PlantDetailsCard';

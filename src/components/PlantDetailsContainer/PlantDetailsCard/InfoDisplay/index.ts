@@ -1,1 +1,1 @@
-export { default } from './InfoDisplay';
+export {default} from './InfoDisplay';

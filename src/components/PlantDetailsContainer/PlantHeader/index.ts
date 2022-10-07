@@ -1,1 +1,1 @@
-export { default } from './PlantHeader';
+export {default} from './PlantHeader';

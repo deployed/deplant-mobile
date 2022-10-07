@@ -1,1 +1,1 @@
-export { default } from './WaterPlantButton';
+export {default} from './WaterPlantButton';

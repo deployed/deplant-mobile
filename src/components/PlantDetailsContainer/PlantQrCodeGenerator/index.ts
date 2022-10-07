@@ -1,1 +1,1 @@
-export { default } from './PlantQrCodeGenerator';
+export {default} from './PlantQrCodeGenerator';
