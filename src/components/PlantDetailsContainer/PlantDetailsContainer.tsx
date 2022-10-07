@@ -1,4 +1,5 @@
 import React from 'react';
+import tw from '@core/styles/tailwind';
 import { View } from "react-native";
 import PlantDetailsCard from './PlantDetailsCard';
 import PlantHeader from './PlantHeader';
@@ -6,11 +7,17 @@ import PlantQrCodeGenerator from './PlantQrCodeGenerator';
 import WaterPlantButton from './WaterPlantButton';
 
 const PlantDetailsContainer = () => {
-    return <View>
-        <PlantHeader name="Kaktus Carl" />
+    return <View style={tw`px-4`}>
+        <PlantHeader>
+            Kaktus Karl
+        </PlantHeader>
         <PlantDetailsCard />
-        <PlantQrCodeGenerator />
-        <WaterPlantButton />
+        <PlantQrCodeGenerator>
+            Generate & share QR code
+        </PlantQrCodeGenerator>
+        <WaterPlantButton>
+            WATER
+        </WaterPlantButton>
     </View>
 }
 
